@@ -9,7 +9,7 @@ from numpy.core.numeric import NaN
 
 # LOAD IN OUR DATA SET
 # MAKE SURE THIS DATA SET IS IN DIRECTORY
-country_data = pd.read_csv('./Country Data - Sheet1.csv')
+country_data = pd.read_csv('Country_DataV1.11 - Sheet1.csv')
 countries = country_data.where(country_data['Exchange'] != 'NaN')
 
 #only_c_w_t = only_c_w_t['Price']
@@ -84,6 +84,7 @@ for i in adjusted_tickers:
   
 price_chg_series
 
+updatedDF = ex_tick
 
 # NOW WE TAKE THE DATA FRAME AND APPEND IT TO THE CSV FILE, OVERWRITING VALUES THAT HAVE CHANGES MADE TO THEM AND MATCHING PRICE DATA MOVING FROM SMALLEST LIST TO LARGEST DATAFRAME
 ex_tick['Price_Change'] = price_chg_series.values
