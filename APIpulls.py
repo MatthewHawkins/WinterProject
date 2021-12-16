@@ -1,5 +1,4 @@
-pip install yfinance
-
+# LOAD IN OUR LIBRARIES
 import pandas as pd
 import requests as req
 import yfinance as yf
@@ -7,16 +6,17 @@ import time
 from pandas.core.resample import h
 from numpy.core.numeric import NaN
 
+
 # LOAD IN OUR DATA SET
 # MAKE SURE THIS DATA SET IS IN DIRECTORY
-country_data = pd.read_csv('Country Data - Sheet1.csv')
+country_data = pd.read_csv('./Country Data - Sheet1.csv')
 countries = country_data.where(country_data['Exchange'] != 'NaN')
 
 #only_c_w_t = only_c_w_t['Price']
 
 # create column for price
 for i in countries['Ticker']:
-  countries['Price'] = i
+  countries['Price_Change'] = i
 
 # get dataframe of only our countries with exchanges and tickers
 ex_tick = countries[~countries['Exchange'].isnull()]
@@ -41,37 +41,36 @@ def get_price_movement(ticker):
 
 adjusted_tickers = ex_tick['Ticker']
 
-# CHANGE CASE40 to "EGPT"
-adjusted_tickers[51] = "EGPT"
+# # CHANGE CASE40 to "EGPT"
+# adjusted_tickers[51] = "EGPT"
 
-adjusted_tickers[59] = "^FCHI"
+# adjusted_tickers[59] = "^FCHI"
 
-# Change 124,NL:AEX to "^AEX"
-adjusted_tickers[124] = "^AEX"
+# # Change 124,NL:AEX to "^AEX"
+# adjusted_tickers[124] = "^AEX"
 
-# CHANGE ^NZ50 to "^NZDOW"
-adjusted_tickers[125] = "VGI"
+# # CHANGE ^NZ50 to "^NZDOW"
+# adjusted_tickers[125] = "VGI"
 
-#CHANGE 186658 to 'SPY'
-adjusted_tickers[129] = "XLF"
+# #CHANGE 186658 to 'SPY'
+# adjusted_tickers[129] = "XLF"
 
-#CHANGE to  "PSEI.PS"
-adjusted_tickers[137] = "PSEI.PS"
+# #CHANGE to  "PSEI.PS"
+# adjusted_tickers[137] = "PSEI.PS"
 
-# CHANGE to DGPTDOWA
-adjusted_tickers[139] = "SPY"
+# # CHANGE to DGPTDOWA
+# adjusted_tickers[139] = "SPY"
 
-# ADJUST SPACE ON IMOEX.ME 
-adjusted_tickers[142] = "IMOEX.ME"
+# # ADJUST SPACE ON IMOEX.ME 
+# adjusted_tickers[142] = "IMOEX.ME"
 
-# CHANGE SPX to "VOO"
-adjusted_tickers[185] = "VOO"
+# # CHANGE SPX to "VOO"
+# adjusted_tickers[185] = "VOO"
 
-print(adjusted_tickers)
+#print(adjusted_tickers)
 
 
-tickers_and_prices = pd.DataFrame(adjusted_tickers)
-print(tickers_and_prices)
+
 
 # CREATE TWO DATA TYPES TO USE A LIST AND A PD SERIES JUST UNCOMMENT THE LIST HERE AND IN THE FOR LOOP TO USE DATA IN A LIST DTYPE
 #price_changes = []
@@ -87,11 +86,18 @@ price_chg_series
 
 
 # NOW WE TAKE THE DATA FRAME AND APPEND IT TO THE CSV FILE, OVERWRITING VALUES THAT HAVE CHANGES MADE TO THEM AND MATCHING PRICE DATA MOVING FROM SMALLEST LIST TO LARGEST DATAFRAME
-ex_tick['Price'] = price_chg_series.values
+ex_tick['Price_Change'] = price_chg_series.values
+
+# ADDS THE PRICE MOVEMENT DATA TO THE RESPECTIVE INDEX OF OUT MASTER CSV FILE
+for x in ex_tick:
+  countries['Price_Change'] = updatedDF['Price_Change']
+
+# CREATES AND SENDS THE MASTER CSV FILE TO DIRECTORY
+countries.to_csv('Country_Exchange_Data.csv')
 
 # DATA IN DATAFRAME FORMAT 
-updatedDF = ex_tick
-display(updatedDF)
+#updatedDF = ex_tick
+#display(updatedDF)
 # JSON FORMAT
-jsondata = ex_tick.to_json()
-jsondata
+#jsondata = ex_tick.to_json()
+#jsondata
