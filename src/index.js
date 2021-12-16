@@ -1,10 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import ReactTooltip from "react-tooltip";
 
-ReactDOM.render(
-    <App />,
-  document.getElementById('root')
-);
+import "./styles.css";
 
+import MapChart from "./MapChart";
+
+function App() {
+  const [content, setContent] = useState("");
+  return (
+    <div>
+      <MapChart setTooltipContent={setContent} />
+      <ReactTooltip>{content}</ReactTooltip>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
