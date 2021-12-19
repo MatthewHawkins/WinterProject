@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useState } from "react";
-import { csv } from "d3-fetch";
+import { csv, json } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import {
   ZoomableGroup,
@@ -9,7 +9,8 @@ import {
 } from "react-simple-maps";
 
 const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+  "/newFile.json";
+
 
 const rounded = num => {
   if (num > 1000000000) {
@@ -30,14 +31,6 @@ const colorScale = scaleLinear()
 const MapChart = ({ setTooltipContent }) => {
 
 
-  // const finData = d3.csv(",", "ONLY_PRICE_CHG.csv", (a) => {
-  //   return {
-  //     TICKER: a.Ticker,
-  //     PRICE: a.Price_Change
-  //   };
-  // });
-
-
   const [data, setData] = useState([]);
   useEffect(() => {
     csv(`/vulnerability.csv`).then((data) => {
@@ -45,7 +38,15 @@ const MapChart = ({ setTooltipContent }) => {
     });
   }, []);
 
-
+// Promise.all([
+//   json("/newFile.json"),
+//   csv("/ONLY_PRICE_CHG.csv")
+// ]).then(([csvData, jsonData]) => {
+//   const myinfo = {};
+//   csvData.forEach(d => {
+//     myinfo[d.ISO_A3] = d.TICKER;
+//   })
+// })
 
 
   return (
@@ -61,8 +62,8 @@ const MapChart = ({ setTooltipContent }) => {
                     key={geo.rsmKey}
                     geography={geo}
                     onMouseEnter={() => {
-                      const { NAME, POP_EST } = geo.properties;
-                      setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                      const { NAME, POP_EST, GDP_MD_EST } = geo.properties;
+                      setTooltipContent(`<h3>${NAME}</h3> <br />Population: ${rounded(POP_EST)}`);
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");

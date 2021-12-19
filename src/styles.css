@@ -12,3 +12,7 @@ svg {
   display: inline-block;
   vertical-align: middle;
 }
+
+.tooltip{
+  white-space: pre-wrap;
+}

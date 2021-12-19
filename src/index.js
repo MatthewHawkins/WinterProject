@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <MapChart setTooltipContent={setContent} />
-      <ReactTooltip>{content}</ReactTooltip>
+      <ReactTooltip html={true} className="tooltip">{content}</ReactTooltip>
     </div>
   );
 }
