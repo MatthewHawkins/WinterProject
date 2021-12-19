@@ -9,7 +9,7 @@ import {
 } from "react-simple-maps";
 
 const geoUrl =
-  "/newFile.json";
+  "/updated.json";
 
 
 const rounded = num => {
@@ -62,8 +62,8 @@ const MapChart = ({ setTooltipContent }) => {
                     key={geo.rsmKey}
                     geography={geo}
                     onMouseEnter={() => {
-                      const { NAME, POP_EST, GDP_MD_EST } = geo.properties;
-                      setTooltipContent(`<h3>${NAME}</h3> <br />Population: ${rounded(POP_EST)}`);
+                      const { NAME, POP_EST, POP_RANK, Tick, Price_Change } = geo.properties;
+                      setTooltipContent(`<h3>${NAME}</h3> <br />Population: ${rounded(POP_EST)} <br />Pop Rank: ${POP_RANK} <br />Ticker: ${Tick} <br />Price Change: ${Price_Change}`);
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");

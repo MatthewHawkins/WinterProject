@@ -77,7 +77,7 @@
 // // Convert the resultant array to json and
 // // generate the JSON output file.
 // let json = JSON.stringify(result);
-// fs.writeFileSync('output.json', json);
+// fs.writeFileSync('obj2.json', json);
 
 
 
@@ -86,28 +86,103 @@
 
 
 
+//  const fs = require("fs");
+
+// let o1 = fs.readFileSync('obj1.json');
+// let obj1 = JSON.parse(o1);
+//  let o2 = fs.readFileSync('output.json');
+//  let obj2 = JSON.parse(o2);
+
+// const result = {};
+// let key;
+// for (key in obj1) {
+//   if(obj1.hasOwnProperty(key)){
+//     result[key] = obj1[key];
+//   }
+// }
+
+// for (key in obj2) {
+//   if(obj2.hasOwnProperty(key)){
+//     result[key] = obj2[key];
+//   }
+// }
+
+// let newObj = JSON.stringify(result);
+
+// fs.writeFileSync('newFile.json', newObj);
+
+// let myArray = obj2.objects.ne_110m_admin_0_countries.geometries
+// let myArray2 = 
+// console.log(myArray);
+
+
+// let obj = {
+//     "1":"aa",
+//     "2":"bb"
+// };
+
+
+// var newNum = "3";
+// var newVal = "cc";
+
+
+// obj[newNum] = newVal;
+
+// console.log(obj);
+
 const fs = require("fs");
 
-let o1 = fs.readFileSync('obj1.json');
+let o1 = fs.readFileSync('BetterJSON-1.json');
 let obj1 = JSON.parse(o1);
-let o2 = fs.readFileSync('output.json');
-let obj2 = JSON.parse(o2);
+ let o2 = fs.readFileSync('obj1.json');
+ let obj2 = JSON.parse(o2);
 
-const result = {};
-let key;
-for (key in obj1) {
-  if(obj1.hasOwnProperty(key)){
-    result[key] = obj1[key];
+
+// for(item in obj1.Ticker){
+//   console.log(obj1.Ticker);
+// }
+
+// for(var myTest in obj1.Ticker){
+//   obj1.Ticker.;
+// }
+// console.log(obj1.Ticker);
+//console.log(obj2.objects.ne_110m_admin_0_countries.geometries);
+//console.log(obj2.objects.ne_110m_admin_0_countries.geometries.properties);
+// for(var test in obj2.objects.ne_110m_admin_0_countries.geometries){
+//   console.log(obj2.objects.ne_110m_admin_0_countries.geometries[test].properties.ISO_A3);
+// }
+
+
+for(var test2 in obj1.Exchange){ // test2 ends up being the ISO3 name, which is the key in the obj1.Ticker value
+  for(var test in obj2.objects.ne_110m_admin_0_countries.geometries){ //test is a numeric value (wtf?) and 
+    if(test2 == obj2.objects.ne_110m_admin_0_countries.geometries[test].properties.ISO_A3){
+      //console.log("TEST");
+      var myTick = "Tick"
+      obj2.objects.ne_110m_admin_0_countries.geometries[test].properties[myTick] = obj1.Exchange[test2];
+      console.log(obj2.objects.ne_110m_admin_0_countries.geometries[test].properties[myTick]);
+    }
   }
 }
 
-for (key in obj2) {
-  if(obj2.hasOwnProperty(key)){
-    result[key] = obj2[key];
+
+for(var test2 in obj1.Price_Change){ // test2 ends up being the ISO3 name, which is the key in the obj1.Ticker value
+  for(var test in obj2.objects.ne_110m_admin_0_countries.geometries){ //test is a numeric value (wtf?) and 
+    if(test2 == obj2.objects.ne_110m_admin_0_countries.geometries[test].properties.ISO_A3){
+      //console.log("TEST");
+      var myTick = "Price_Change"
+      obj2.objects.ne_110m_admin_0_countries.geometries[test].properties[myTick] = obj1.Price_Change[test2];
+      console.log(obj2.objects.ne_110m_admin_0_countries.geometries[test].properties[myTick]);
+    }
   }
 }
 
-let newObj = JSON.stringify(result);
+let newJson = JSON.stringify(obj2);
+fs.writeFileSync('updated.json', newJson);
 
-fs.writeFileSync('newFile.json', newObj);
+// for(var test in obj1.Ticker){
+//   console.log(test);
+// }
 
+// for(var test in obj1.Ticker){
+//   console.log(obj1.Ticker[test]);
+// }

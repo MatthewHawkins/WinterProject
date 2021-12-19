@@ -1,6 +1,0 @@
-{
-    "Country_Name": "Some_Value (but probably an int)",
-    "Country_Two": "Another Value",
-    "Country_Three": "Value3"
-    /* Don't forget that, after each pair, you need a comma. The last one doesn't need a comma. This might be useful as you set up some sort of loop */
-}
