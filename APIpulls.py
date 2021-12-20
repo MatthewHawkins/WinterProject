@@ -133,3 +133,31 @@ while(1):
     df.to_csv('ISO3_tick.csv')
 
   get_data_files(ex_tick)
+
+  # CODE THAT PARSES THROUGH AND EDITS THE JSON FILE
+  # BRING OUR DATA IN
+tickers = open('/content/ISO3_tick.json')
+master_list = open('/content/updated.json')
+
+tickers_parsed = json.load(tickers)
+masters_list_parsed = json.load(master_list)
+
+# FOR LOOPS TO 
+for i in tickers_parsed['Exchange']:
+  for j in range(len(masters_list_parsed['objects']['ne_110m_admin_0_countries']['geometries'])):
+    if(i == masters_list_parsed['objects']['ne_110m_admin_0_countries']['geometries'][j]['properties']['ISO_A3']):
+      #print(i)
+      new_var = "Tick"
+      masters_list_parsed['objects']['ne_110m_admin_0_countries']['geometries'][j]['properties'][new_var] = tickers_parsed['Exchange'][i]
+
+
+for i in tickers_parsed['Price_Change']:
+  for j in range(len(masters_list_parsed['objects']['ne_110m_admin_0_countries']['geometries'])):
+    if(i == masters_list_parsed['objects']['ne_110m_admin_0_countries']['geometries'][j]['properties']['ISO_A3']):
+      #print(i)
+      new_var = "Price_Change"
+      masters_list_parsed['objects']['ne_110m_admin_0_countries']['geometries'][j]['properties'][new_var] = tickers_parsed['Price_Change'][i]
+
+
+with open('updated.json', 'w') as outfile:
+  json.dump(masters_list_parsed, outfile)

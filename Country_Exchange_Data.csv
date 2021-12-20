@@ -34,7 +34,7 @@
 32,CAF,Central African Republic,,,
 33,TCD,Chad,,,
 34,CHL,Chile,,,
-35,CHN,China,Shenzhen Component,399001.SZ,-1.9730951375611931
+35,CHN,China,Shenzhen Component,399001.SZ,-2.0479267696612418
 36,COL,Colombia,,,
 37,COM,Comoros,,,
 38,COG,Congo,,,
@@ -72,15 +72,15 @@
 70,GUY,Guyana,,,
 71,HTI,Haiti,,,
 72,HND,Honduras,,,
-73,HKG,Hong Kong,Hang Seng Index,^HSI,-1.9902859253278824
+73,HKG,Hong Kong,Hang Seng Index,^HSI,-2.139131543249045
 74,HUN,Hungary,,,
 75,ISL,Iceland,,,
-76,IND,India,BSE (Bombay),^BSESN,-2.586680619481355
-77,IDN,Indonesia,Jakarta Index,^JKSE,-0.597816673422414
+76,IND,India,BSE (Bombay),^BSESN,-3.0468096415066617
+77,IDN,Indonesia,Jakarta Index,^JKSE,-0.8817707221529114
 78,IRN,"Iran, Islamic Republic of",,,
 79,IRQ,Iraq,,,
 80,IRL,Ireland,,,
-81,ISR,Israel,Tel Aviv Stock Exchange,^TA125.TA,-0.45304928515284376
+81,ISR,Israel,Tel Aviv Stock Exchange,^TA125.TA,1.2907413734617752
 82,ITA,Italy,,,
 83,JAM,Jamaica,,,
 84,JPN,Japan,Nikkei 225,^N225,-2.175793767393106
@@ -89,7 +89,7 @@
 87,KEN,Kenya,,,
 88,KIR,Kiribati,,,
 89,PRK,"Korea, Democratic People's Repub",,,
-90,KOR,"Korea, Republic of",KOSPI,^KS11,-1.7550797802826523
+90,KOR,"Korea, Republic of",KOSPI,^KS11,-1.847113751898414
 91,KWT,Kuwait,,,
 92,KGZ,Kyrgyzstan,,,
 93,LAO,Lao People's Democratic Republic,,,
@@ -104,7 +104,7 @@
 102,MKD,Macedonia,,,
 103,MDG,Madagascar,,,
 104,MWI,Malawi,,,
-105,MYS,Malaysia,Kuala Lumpur Exchange,^KLSE,-0.46620629020047405
+105,MYS,Malaysia,Kuala Lumpur Exchange,^KLSE,-0.7161429077165173
 106,MDV,Maldives,,,
 107,MLI,Mali,,,
 108,MLT,Malta,,,
@@ -136,12 +136,12 @@
 134,PNG,Papua New Guinea,,,
 135,PRY,Paraguay,,,
 136,PER,Peru,,,
-137,PHL,Philippines,PSEi Index,PSEI.PS,-1.45220427766729
+137,PHL,Philippines,PSEi Index,PSEI.PS,-0.8296978436680412
 138,POL,Poland,,,
 139,PRT,Portugal,Dow Jones Portugal Index EUR,SPY,-1.0750931381071895
 140,QAT,Qatar,,,
 141,ROU,Romania,,,
-142,RUS,Russian Federation,MOEX Russia index,IMOEX.ME,-0.7275885914402622
+142,RUS,Russian Federation,MOEX Russia index,IMOEX.ME,-1.8954521082460711
 143,RWA,Rwanda,,,
 144,KNA,Saint Kitts and Nevis,,,
 145,LCA,Saint Lucia,,,
@@ -159,7 +159,7 @@
 157,SVN,Slovenia,,,
 158,SLB,Solomon Islands,,,
 159,SOM,Somalia,,,
-160,ZAF,South Africa,Johannesburg,^JN0U.JO,1.3537521413891436
+160,ZAF,South Africa,Johannesburg,^JN0U.JO,-1.8205270109525513
 161,ESP,Spain,,,
 162,LKA,Sri Lanka,,,
 163,SDN,Sudan,,,
@@ -177,7 +177,7 @@
 175,TON,Tonga,,,
 176,TTO,Trinidad and Tobago,,,
 177,TUN,Tunisia,,,
-178,TUR,Turkey,BIST 100,XU100.IS,-9.311590196989686
+178,TUR,Turkey,BIST 100,XU100.IS,0.956928197034895
 179,TKM,Turkmenistan,,,
 180,TUV,Tuvalu,,,
 181,UGA,Uganda,,,
