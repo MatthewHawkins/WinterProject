@@ -5,16 +5,16 @@
 3,AND,Andorra,,,
 4,AGO,Angola,,,
 5,ATG,Antigua and Barbuda,,,
-6,ARG,Argentina,Merval Exchange,^MERV,-1.5312760852829006
+6,ARG,Argentina,Merval Exchange,^MERV,0.28692625660118587
 7,ARM,Armenia,,,
-8,AUS,Australia,ASX,^AXJO,-0.4303891539282891
+8,AUS,Australia,ASX,^AXJO,-0.161814052980677
 9,AUT,Austria,,,
 10,AZE,Azerbaijan,,,
 11,BHS,Bahamas,,,
 12,BHR,Bahrain,,,
 13,BGD,Bangladesh,,,
 14,BRB,Barbados,,,
-15,BLR,Belarus,BEL 20,^BFX,0.005579328575781023
+15,BLR,Belarus,BEL 20,^BFX,0.052267851139286975
 16,BEL,Belgium,,,
 17,BLZ,Belize,,,
 18,BEN,Benin,,,
@@ -22,19 +22,19 @@
 20,BOL,"Bolivia, Plurinational State of",,,
 21,BIH,Bosnia and Herzegovina,,,
 22,BWA,Botswana,,,
-23,BRA,Brazil,Sao Paulo Exchange,^BVSP,0.5681289000651951
+23,BRA,Brazil,Sao Paulo Exchange,^BVSP,-0.8292801103222079
 24,BRN,Brunei Darussalam,,,
 25,BGR,Bulgaria,,,
 26,BFA,Burkina Faso,,,
 27,BDI,Burundi,,,
 28,KHM,Cambodia,,,
 29,CMR,Cameroon,,,
-30,CAN,Canada,Toronto Exchange,^GSPTSE,0.580665667967233
+30,CAN,Canada,Toronto Exchange,^GSPTSE,-0.0038612336660398287
 31,CPV,Cape Verde,,,
 32,CAF,Central African Republic,,,
 33,TCD,Chad,,,
 34,CHL,Chile,,,
-35,CHN,China,Shenzhen Component,399001.SZ,0.19782273697314026
+35,CHN,China,Shenzhen Component,399001.SZ,-1.9730951375611931
 36,COL,Colombia,,,
 37,COM,Comoros,,,
 38,COG,Congo,,,
@@ -50,7 +50,7 @@
 48,DMA,Dominica,,,
 49,DOM,Dominican Republic,,,
 50,ECU,Ecuador,,,
-51,EGY,Egypt,EGX,EGPT,0.4848905757411288
+51,EGY,Egypt,EGX,EGPT,-0.2976187730795046
 52,SLV,El Salvador,,,
 53,GNQ,Equatorial Guinea,,,
 54,ERI,Eritrea,,,
@@ -58,11 +58,11 @@
 56,ETH,Ethiopia,,,
 57,FJI,Fiji,,,
 58,FIN,Finland,,,
-59,FRA,France,CAC 40,^FCHI,0.4665350887023529
+59,FRA,France,CAC 40,^FCHI,-1.1324402015601869
 60,GAB,Gabon,,,
 61,GMB,Gambia,,,
 62,GEO,Georgia,,,
-63,DEU,Germany,DAX,^GDAXI,0.14725719977723067
+63,DEU,Germany,DAX,^GDAXI,-0.6741697654323309
 64,GHA,Ghana,,,
 65,GRC,Greece,,,
 66,GRD,Grenada,,,
@@ -72,24 +72,24 @@
 70,GUY,Guyana,,,
 71,HTI,Haiti,,,
 72,HND,Honduras,,,
-73,HKG,Hong Kong,Hang Seng Index,^HSI,-0.4867116923096519
+73,HKG,Hong Kong,Hang Seng Index,^HSI,-1.9902859253278824
 74,HUN,Hungary,,,
 75,ISL,Iceland,,,
-76,IND,India,BSE (Bombay),^BSESN,0.2129265081462416
-77,IDN,Indonesia,Jakarta Index,^JKSE,-0.6821987676337561
+76,IND,India,BSE (Bombay),^BSESN,-2.586680619481355
+77,IDN,Indonesia,Jakarta Index,^JKSE,-0.597816673422414
 78,IRN,"Iran, Islamic Republic of",,,
 79,IRQ,Iraq,,,
 80,IRL,Ireland,,,
-81,ISR,Israel,Tel Aviv Stock Exchange,^TA125.TA,-0.027471099291782267
+81,ISR,Israel,Tel Aviv Stock Exchange,^TA125.TA,-0.45304928515284376
 82,ITA,Italy,,,
 83,JAM,Jamaica,,,
-84,JPN,Japan,Nikkei 225,^N225,2.0869501294050323
+84,JPN,Japan,Nikkei 225,^N225,-2.175793767393106
 85,JOR,Jordan,,,
 86,KAZ,Kazakhstan,,,
 87,KEN,Kenya,,,
 88,KIR,Kiribati,,,
 89,PRK,"Korea, Democratic People's Repub",,,
-90,KOR,"Korea, Republic of",KOSPI,^KS11,0.42469706463447904
+90,KOR,"Korea, Republic of",KOSPI,^KS11,-1.7550797802826523
 91,KWT,Kuwait,,,
 92,KGZ,Kyrgyzstan,,,
 93,LAO,Lao People's Democratic Republic,,,
@@ -104,14 +104,14 @@
 102,MKD,Macedonia,,,
 103,MDG,Madagascar,,,
 104,MWI,Malawi,,,
-105,MYS,Malaysia,Kuala Lumpur Exchange,^KLSE,0.1501629861884248
+105,MYS,Malaysia,Kuala Lumpur Exchange,^KLSE,-0.46620629020047405
 106,MDV,Maldives,,,
 107,MLI,Mali,,,
 108,MLT,Malta,,,
 109,MHL,Marshall Islands,,,
 110,MRT,Mauritania,,,
 111,MUS,Mauritius,,,
-112,MEX,Mexico,IPC Mexico,^MXX,-0.15207784883328979
+112,MEX,Mexico,IPC Mexico,^MXX,1.9001994090737804
 113,FSM,"Micronesia, Federated States of",,,
 114,MDA,"Moldova, Republic of",,,
 115,MCO,Monaco,,,
@@ -123,12 +123,12 @@
 121,NAM,Namibia,,,
 122,NRU,Nauru,,,
 123,NPL,Nepal,,,
-124,NLD,Netherlands,Amsterdam AEX Index,^AEX,-0.037394323256805494
-125,NZL,New Zealand,NZSE,VGI,-0.266427463245003
+124,NLD,Netherlands,Amsterdam AEX Index,^AEX,-1.281587986522438
+125,NZL,New Zealand,NZSE,VGI,-0.08936755368040318
 126,NIC,Nicaragua,,,
 127,NER,Niger,,,
 128,NGA,Nigeria,,,
-129,NOR,Norway,Oslo Exchange Benchmark Index_GI,^OSEAX,-0.7063831327425629
+129,NOR,Norway,Oslo Exchange Benchmark Index_GI,^OSEAX,-0.946231011751218
 130,OMN,Oman,,,
 131,PAK,Pakistan,,,
 132,PLW,Palau,,,
@@ -136,12 +136,12 @@
 134,PNG,Papua New Guinea,,,
 135,PRY,Paraguay,,,
 136,PER,Peru,,,
-137,PHL,Philippines,PSEi Index,PSEI.PS,0.952622986534393
+137,PHL,Philippines,PSEi Index,PSEI.PS,-1.45220427766729
 138,POL,Poland,,,
-139,PRT,Portugal,Dow Jones Portugal Index EUR,SPY,1.5384659281879762
+139,PRT,Portugal,Dow Jones Portugal Index EUR,SPY,-1.0750931381071895
 140,QAT,Qatar,,,
 141,ROU,Romania,,,
-142,RUS,Russian Federation,MOEX Russia index,IMOEX.ME,0.06709819194167836
+142,RUS,Russian Federation,MOEX Russia index,IMOEX.ME,-0.7275885914402622
 143,RWA,Rwanda,,,
 144,KNA,Saint Kitts and Nevis,,,
 145,LCA,Saint Lucia,,,
@@ -159,7 +159,7 @@
 157,SVN,Slovenia,,,
 158,SLB,Solomon Islands,,,
 159,SOM,Somalia,,,
-160,ZAF,South Africa,Johannesburg,^JN0U.JO,-0.561557079727085
+160,ZAF,South Africa,Johannesburg,^JN0U.JO,1.3537521413891436
 161,ESP,Spain,,,
 162,LKA,Sri Lanka,,,
 163,SDN,Sudan,,,
@@ -168,7 +168,7 @@
 166,SWE,Sweden,,,
 167,CHE,Switzerland,,,
 168,SYR,Syrian Arab Republic,,,
-169,TWN,Taiwan,TSEC,^TWII,0.7064121219828164
+169,TWN,Taiwan,TSEC,^TWII,-0.812041318579477
 170,TJK,Tajikistan,,,
 171,TZA,"Tanzania, United Republic of",,,
 172,THA,Thailand,,,
@@ -177,14 +177,14 @@
 175,TON,Tonga,,,
 176,TTO,Trinidad and Tobago,,,
 177,TUN,Tunisia,,,
-178,TUR,Turkey,BIST 100,XU100.IS,0.21274094956169742
+178,TUR,Turkey,BIST 100,XU100.IS,-9.311590196989686
 179,TKM,Turkmenistan,,,
 180,TUV,Tuvalu,,,
 181,UGA,Uganda,,,
 182,UKR,Ukraine,,,
 183,ARE,United Arab Emirates,,,
-184,GBR,United Kingdom,FTSE,^FTSE,-0.6665963946937034
-185,USA,United States,SPX,VOO,1.5389956469345756
+184,GBR,United Kingdom,FTSE,^FTSE,0.1279220458661587
+185,USA,United States,SPX,VOO,-1.0485594702645082
 186,URY,Uruguay,,,
 187,UZB,Uzbekistan,,,
 188,VUT,Vanuatu,,,
