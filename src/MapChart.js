@@ -24,8 +24,8 @@ const rounded = num => {
 
 
 const colorScale = scaleLinear()
-  .domain([-3.5, 3.5])
-  .range(["#ba0000", "#22ba00"]);
+  .domain([-3.5, 0, 3.5])
+  .range(["#ba0000", "#808080", "#22ba00"]);
 
 
 const MapChart = ({ setTooltipContent }) => {
@@ -60,7 +60,7 @@ const MapChart = ({ setTooltipContent }) => {
   return (
     <>
       <ComposableMap data-tip="" projectionConfig={{ scale: 150 }}>
-        <ZoomableGroup>
+        {/* <ZoomableGroup> */}
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
@@ -72,7 +72,7 @@ const MapChart = ({ setTooltipContent }) => {
                     geography={geo}
                     onMouseEnter={() => {
                       const { NAME, POP_EST, POP_RANK, Tick, Price_Change } = geo.properties;
-                      setTooltipContent(`<h3>${NAME}</h3> <br />Population: ${rounded(POP_EST)} <br />Pop Rank: ${POP_RANK} <br />Exchange: ${Tick} <br />Price Change: ${Price_Change}`);
+                      setTooltipContent(`<h4>${NAME}</h4> <br />Population: ${rounded(POP_EST)} <br />Pop Rank: ${POP_RANK} <br />Exchange: ${Tick} <br />Price Change: ${Price_Change}`);
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");
@@ -84,7 +84,7 @@ const MapChart = ({ setTooltipContent }) => {
               })
             }
           </Geographies>
-        </ZoomableGroup>
+        {/* </ZoomableGroup> */}
       </ComposableMap>
     </>
   );
