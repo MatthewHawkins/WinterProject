@@ -8,6 +8,11 @@ body {
   padding: 0 1.5rem;
 }
 
+body:hover {
+  margin: 0;
+  padding: 0 1.5rem;
+}
+
 svg {
   display: inline-block;
   vertical-align: middle;

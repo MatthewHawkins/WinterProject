@@ -24,17 +24,25 @@ const rounded = num => {
 
 
 const colorScale = scaleLinear()
-  .domain([0.29, 0.68])
-  .range(["#ffedea", "#ff5233"]);
+  .domain([-3.5, 3.5])
+  .range(["#ba0000", "#22ba00"]);
 
 
 const MapChart = ({ setTooltipContent }) => {
 
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   csv(`/vulnerability.csv`).then((data) => {
+  //     setData(data);
+  //   });
+  // }, []);
+
+
+  const [newData, setNewData] = useState([]);
   useEffect(() => {
-    csv(`/vulnerability.csv`).then((data) => {
-      setData(data);
+    csv(`/ISO3_tick.csv`).then((newData) => {
+      setNewData(newData);
     });
   }, []);
 
@@ -56,19 +64,21 @@ const MapChart = ({ setTooltipContent }) => {
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const d = data.find((s) => s.ISO3 === geo.properties.ISO_A3);
+                //const d = data.find((s) => s.ISO3 === geo.properties.ISO_A3);
+                const d1 = newData.find((s1) => s1.ISO3 === geo.properties.ISO_A3);
                 return (
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
                     onMouseEnter={() => {
                       const { NAME, POP_EST, POP_RANK, Tick, Price_Change } = geo.properties;
-                      setTooltipContent(`<h3>${NAME}</h3> <br />Population: ${rounded(POP_EST)} <br />Pop Rank: ${POP_RANK} <br />Ticker: ${Tick} <br />Price Change: ${Price_Change}`);
+                      setTooltipContent(`<h3>${NAME}</h3> <br />Population: ${rounded(POP_EST)} <br />Pop Rank: ${POP_RANK} <br />Exchange: ${Tick} <br />Price Change: ${Price_Change}`);
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");
                     }}
-                    fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                    //fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                    fill={d1 ? colorScale(d1["Price_Change"]) : "#F5F4F6"}
                   />
                 );
               })

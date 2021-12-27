@@ -81,7 +81,7 @@ while(1):
     time.sleep(1)
     #price_changes.append(get_price_movement(f"{i}"))
     price_chg_series[i] = get_price_movement(f"{i}")
-    
+    print(i)
   price_chg_series
 
   updatedDF = ex_tick

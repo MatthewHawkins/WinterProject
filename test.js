@@ -129,7 +129,6 @@
 // obj[newNum] = newVal;
 
 // console.log(obj);
-
 const fs = require("fs");
 
 let o1 = fs.readFileSync('BetterJSON-1.json');
